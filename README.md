@@ -169,7 +169,7 @@ No environment variables are required for the default setup. If you add backend 
 <img src="assets/screenshots/image.png" width="800"/>
 
 <h3>📊 Dashboard</h3>
-<img src="assets/screenshots/Screenshot 2026-04-06 180345.png" width="800"/>
+<img src="assets/screenshots/Screenshot 2026-04-06 180003.png" width="800"/>
 
 
 
