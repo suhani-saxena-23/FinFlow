@@ -5,6 +5,30 @@ A modern, responsive Finance Dashboard Web App built using React.js + TypeScript
 🚀 Live Demo
 https://finance-flow-xi-sable.vercel.app/
 
+## Project Structure
+
+```
+src/
+├── components/     # Reusable UI components (AppShell, NavLink, shadcn/ui)
+├── context/        # AppContext for global state & role management
+├── data/           # Mock data for dashboard, transactions, goals
+├── hooks/          # Custom hooks (use-mobile, use-toast)
+├── pages/          # Route pages (Dashboard, Transactions, Reports, etc.)
+├── assets/         # Static assets
+└── lib/            # Utility functions
+```
+
+## Tech Stack
+
+- **React 18** + **TypeScript 5**
+- **Vite 5** — Dev server & bundler
+- **Tailwind CSS 3** — Utility-first styling
+- **shadcn/ui** — Accessible component primitives
+- **Recharts** — Charts & data visualisation
+- **React Router 6** — Client-side routing
+- **React Context** — Global state management
+  
+
 ## Features
 
 📌 Features
@@ -94,15 +118,7 @@ Page transitions
 Popover animations
 Fully responsive design
 
-## Tech Stack
 
-- **React 18** + **TypeScript 5**
-- **Vite 5** — Dev server & bundler
-- **Tailwind CSS 3** — Utility-first styling
-- **shadcn/ui** — Accessible component primitives
-- **Recharts** — Charts & data visualisation
-- **React Router 6** — Client-side routing
-- **React Context** — Global state management
 
 ## Prerequisites
 
@@ -147,16 +163,12 @@ The app will be available at `http://localhost:8080`.
 
 No environment variables are required for the default setup. If you add backend integrations later, configure them in the Vercel dashboard under **Settings → Environment Variables**.
 
-## Project Structure
 
-```
-src/
-├── components/     # Reusable UI components (AppShell, NavLink, shadcn/ui)
-├── context/        # AppContext for global state & role management
-├── data/           # Mock data for dashboard, transactions, goals
-├── hooks/          # Custom hooks (use-mobile, use-toast)
-├── pages/          # Route pages (Dashboard, Transactions, Reports, etc.)
-├── assets/         # Static assets
-└── lib/            # Utility functions
-```
 
+📄 License
+
+This project is for educational and evaluation purposes.
+
+⭐ If you like this project
+
+Give it a star on GitHub ⭐
