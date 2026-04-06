@@ -163,6 +163,14 @@ The app will be available at `http://localhost:8080`.
 
 No environment variables are required for the default setup. If you add backend integrations later, configure them in the Vercel dashboard under **Settings → Environment Variables**.
 
+## 📸 Screenshots
+
+<h3>🏠 Landing Page</h3>
+<img src="assets/screenshots/image.png" width="800"/>
+
+<h3>📊 Dashboard</h3>
+<img src="assets/screenshots/Screenshot 2026-04-06 180345.png" width="800"/>
+
 
 
 📄 License
