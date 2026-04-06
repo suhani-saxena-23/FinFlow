@@ -1,17 +1,98 @@
 # FinFlow — Personal Finance Dashboard
 
-A premium, data-rich personal finance dashboard built with React, TypeScript, and Tailwind CSS. Inspired by Monarch Money and Toshl with a teal/dark-green color palette.
+A modern, responsive Finance Dashboard Web App built using React.js + TypeScript + Context API, designed to help users track, analyze, and understand their financial activity with clean UI, insightful analytics, and smooth user experience.
+
+🚀 Live Demo
+https://finance-flow-xi-sable.vercel.app/
 
 ## Features
 
-- **Dashboard** — Net worth summary, balance trend chart, spending breakdown donut
-- **Transactions** — Filterable list with admin add/delete capabilities
-- **Budget** — Category-based budget tracking with progress bars
-- **Reports** — Cash flow, spending by category (bubble chart), and income breakdown
-- **Goals** — Savings goal cards with contribution drawer, emoji icons, progress tracking
-- **Insights** — AI-powered financial tips
-- **Role Switching** — Toggle between Admin and Viewer roles in the sidebar
-- **Dark Mode** — Full dark/light theme support via top-bar toggle
+📌 Features
+🏠 Landing Page
+Beautiful fintech-style hero section
+Call-to-action to access dashboard
+Clean and minimal UI with gradient aesthetics
+📊 Dashboard Overview
+Summary cards:
+Total Balance
+Income
+Expenses
+Mini visual indicators and trends
+Fully responsive layout
+📈 Analytics & Visualizations
+Line Chart → Balance trend over time
+Bar Chart → Income vs Expenses
+Donut Chart → Spending breakdown
+Sankey Diagram → Cash flow visualization (Income → Expenses → Savings)
+📋 Transactions Management
+View all transactions with:
+Date, Amount, Category, Type
+Features:
+Search
+Filtering (category/type)
+Sorting (date/amount)
+🎯 Goals Section (New Feature)
+
+Users can define and track financial goals.
+
+Features:
+Add goals (e.g., “Save ₹50,000 for Travel”)
+Track progress with progress bars
+Set deadlines or target amounts
+Visual indicators:
+Completed goals
+In-progress goals
+Insights like:
+“You are 70% towards your savings goal”
+👤 Role-Based UI (Frontend Simulation)
+Switch between:
+Admin
+Viewer
+Permissions:
+Admin:
+Add / Edit / Delete transactions
+Add/Edit goals
+Viewer:
+Read-only access
+🙍 Profile Popover
+Clickable avatar in navbar
+Shows:
+Profile image
+Name & Email
+Role badge
+Logout option
+Dynamic data based on selected role
+💡 Insights Section
+
+Smart, data-driven insights including:
+
+Highest spending category
+Monthly comparison
+Spending trends
+Budget usage warnings
+Most expensive day/week
+Frequent categories
+Savings analysis
+Income vs expense ratio
+Recurring expenses
+Smart financial suggestions
+📊 Advanced Analytics
+Cash flow analysis
+Daily/weekly spending patterns
+Budget vs actual comparison
+Recurring vs one-time expenses
+Transaction size distribution
+Savings rate trends
+Anomaly detection
+✨ UI & UX
+Soft gradient theme (pink → purple → dark indigo)
+Light & Dark mode support
+Glassmorphism effects
+Smooth animations:
+Hover effects
+Page transitions
+Popover animations
+Fully responsive design
 
 ## Tech Stack
 
@@ -26,7 +107,6 @@ A premium, data-rich personal finance dashboard built with React, TypeScript, an
 ## Prerequisites
 
 - **Node.js** ≥ 18
-- **npm** or **bun**
 
 ## Run Locally (VS Code)
 
@@ -62,21 +142,6 @@ The app will be available at `http://localhost:8080`.
 3. Vercel auto-detects **Vite** — no config changes needed.
 4. Click **Deploy**. Your app will be live in ~60 seconds.
 
-### Option B — Via Vercel CLI
-
-```bash
-# 1. Install the CLI
-npm i -g vercel
-
-# 2. Login
-vercel login
-
-# 3. Deploy (follow the prompts)
-vercel
-
-# For production deployment
-vercel --prod
-```
 
 ### Environment Variables
 
@@ -95,25 +160,3 @@ src/
 └── lib/            # Utility functions
 ```
 
-## Files Safe to Delete Before Deploying
-
-These files are development/testing-only and can be removed from your GitHub repo or Vercel deployment:
-
-| File / Folder | Reason |
-|---|---|
-| `playwright.config.ts` | Playwright test config |
-| `playwright-fixture.ts` | Playwright test fixture |
-| `vitest.config.ts` | Vitest test config |
-| `src/test/` | Test files |
-| `eslint.config.js` | Linting config (not needed at runtime) |
-| `tsconfig.node.json` | TypeScript config for tooling |
-| `.gitignore` | Only needed in repo, not in build |
-| `bun.lock` / `bun.lockb` | Bun lockfiles (if using npm) |
-| `public/robots.txt` | Optional — remove if you don't need SEO control |
-| `src/assets/*.asset.json` | Asset metadata files (not bundled) |
-
-> **Note:** Vite only bundles files imported in your source code. Most config files are already excluded from the production `dist/` build automatically. These are safe to delete from your repo if you want a cleaner codebase.
-
-## License
-
-MIT
