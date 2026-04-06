@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
+
+    --background: 150 20% 97%;
+    --foreground: 168 60% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 168 60% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 168 60% 10%;
+
+    --primary: 164 72% 21%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 30% 94%;
+    --secondary-foreground: 164 72% 21%;
+
+    --muted: 156 20% 92%;
+    --muted-foreground: 162 28% 45%;
+
+    --accent: 174 55% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 4 78% 56%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 162 25% 82%;
+    --input: 162 25% 85%;
+    --ring: 164 72% 21%;
+    --radius: 0.75rem;
+
+    /* Finance-specific tokens */
+    --income: 152 56% 52%;
+    --expense: 4 78% 56%;
+    --savings: 164 72% 35%;
+    --warning: 40 90% 62%;
+    --info: 195 65% 55%;
+
+    /* Chart palette */
+    --chart-1: 162 69% 36%;
+    --chart-2: 195 65% 55%;
+    --chart-3: 15 65% 52%;
+    --chart-4: 36 85% 55%;
+    --chart-5: 255 35% 67%;
+    --chart-6: 340 55% 58%;
+
+    /* Report (Monarch) palette */
+    --report-primary: 157 70% 36%;
+    --report-dark: 162 72% 24%;
+    --report-income: 155 65% 49%;
+    --report-expense: 6 75% 57%;
+    --report-highlight: 36 90% 55%;
+
+    /* Surfaces */
+    --surface-mint: 155 45% 96%;
+    --surface-card: 156 35% 95%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 168 60% 10%;
+    --sidebar-primary: 164 72% 21%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 156 20% 92%;
+    --sidebar-accent-foreground: 164 72% 21%;
+    --sidebar-border: 162 25% 82%;
+    --sidebar-ring: 164 72% 21%;
+  }
+
+  .dark {
+    --background: 160 30% 6%;
+    --foreground: 150 15% 90%;
+
+    --card: 160 25% 9%;
+    --card-foreground: 150 15% 90%;
+
+    --popover: 160 25% 9%;
+    --popover-foreground: 150 15% 90%;
+
+    --primary: 162 55% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 20% 14%;
+    --secondary-foreground: 150 15% 85%;
+
+    --muted: 160 15% 16%;
+    --muted-foreground: 155 15% 55%;
+
+    --accent: 174 55% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 4 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 15% 18%;
+    --input: 160 15% 20%;
+    --ring: 162 55% 45%;
+
+    --surface-mint: 160 20% 8%;
+    --surface-card: 160 18% 11%;
+
+    --sidebar-background: 160 25% 7%;
+    --sidebar-foreground: 150 15% 85%;
+    --sidebar-primary: 162 55% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 15% 14%;
+    --sidebar-accent-foreground: 150 15% 85%;
+    --sidebar-border: 160 15% 18%;
+    --sidebar-ring: 162 55% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .stat-card {
+    @apply rounded-xl border bg-card p-5 shadow-sm transition-shadow hover:shadow-md;
+  }
+
+  .finance-positive {
+    color: hsl(var(--income));
+  }
+
+  .finance-negative {
+    color: hsl(var(--expense));
+  }
+
+  .gradient-teal {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+}
+
+@layer utilities {
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out both;
+  }
+
+  .animate-slide-up-delay-1 {
+    animation: slide-up 0.6s ease-out 0.1s both;
+  }
+
+  .animate-slide-up-delay-2 {
+    animation: slide-up 0.6s ease-out 0.2s both;
+  }
+
+  .animate-slide-up-delay-3 {
+    animation: slide-up 0.6s ease-out 0.3s both;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delay {
+    animation: float 6s ease-in-out 2s infinite;
+  }
+
+  .animate-float-slow {
+    animation: float-slow 8s ease-in-out infinite;
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.3s ease-out both;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(8deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(8deg);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(-5deg) translateX(30px);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-5deg) translateX(30px);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
